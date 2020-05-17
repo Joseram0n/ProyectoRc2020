@@ -1,3 +1,5 @@
+% Obtenido de: https://github.com/DonaldKellett/Einsteins-Riddle-Prolog
+
 % Einstein's Riddle.pl
 % A formulation of Einstein's Riddle (aka Zebra Puzzle) in Prolog (specifically, SWI-Prolog - see http://www.swi-prolog.org/) as appeared on Life International magazine 17/12/1962
 % Source: https://en.wikipedia.org/wiki/Zebra_Puzzle
