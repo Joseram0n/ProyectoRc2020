@@ -78,11 +78,11 @@ Una vez aclarado el concepto de lógica en este ámbito, pasemos a describir
 las ventajas e inconvenientes que conlleva el uso de esta técnica en el campo
 de la inteligencia artificial.
 
-| Ventajas | Desventajas |  |  |  |
-|--------------------------------------------------------|------------------------------------------------------------------------------------------------|---|---|---|
-| Implementación   mucho más sencilla. | Numerosas   restricciones que pueden derivar en problemas a la hora de trabajar con ella. |  |  |  |
-| Si se sabe   utilizar, es una herramienta muy potente. | Su uso no es   muy extendido y posee escasas áreas de aplicación. |  |  |  |
-| Expresión simple y precisa de los problemas. | En ocasiones, dependiendo del problema que estemos   tratando, puede resultar muy ineficiente. |  |  |  |
+| Ventajas | Desventajas |
+|--------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| Implementación   mucho más sencilla. | Numerosas   restricciones que pueden derivar en problemas a la hora de trabajar con ella. |
+| Si se sabe   utilizar, es una herramienta muy potente. | Su uso no es   muy extendido y posee escasas áreas de aplicación. |
+| Expresión simple y precisa de los problemas. | En ocasiones, dependiendo del problema que estemos   tratando, puede resultar muy ineficiente. |
 
 
 ### Representación de redes semánticas
@@ -104,6 +104,8 @@ Las redes semánticas están formadas esencialmente por dos componentes:
 la red. Dentro de estas asociaciones, encontramos algunas como:
 ES_UN, PARTE_DE, CAUSA_DE, entre otras. También pueden
 representar definiciones y características de nodos.
+
+![alt text](\Parte_Teorica\img31.png?raw=true)
 
 **Imagen 3.1** : Ejemplo de red semántica representada mediante un grafo
 
