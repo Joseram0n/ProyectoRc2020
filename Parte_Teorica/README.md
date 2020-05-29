@@ -80,31 +80,25 @@ de la inteligencia artificial.
 
 | Ventajas | Desventajas |
 | :------- | ----------: |
-Implementación mucho más
+| Implementación mucho más
 sencilla. | Numerosas restricciones que
 pueden derivar en problemas a la
-hora de trabajar con ella.
+hora de trabajar con ella. |
 
-|
+| Si se sabe utilizar, es una        
+herramienta muy potente. |
 
-Si se sabe utilizar, es una        
-herramienta muy potente.
+| Su uso no es muy extendido y
+posee escasas áreas de aplicación. |
 
-|
 
-Su uso no es muy extendido y
-posee escasas áreas de aplicación.
+| Expresión simple y precisa de los
+problemas. |
 
-|
 
-Expresión simple y precisa de los
-problemas.
-
-|
-
-En ocasiones, dependiendo del
+| En ocasiones, dependiendo del
 problema que estemos tratando,
-puede resultar muy ineficiente.
+puede resultar muy ineficiente. |
 
 
 ### Representación de redes semánticas
