@@ -126,6 +126,8 @@ red semántica debe cumplir ciertos requisitos, como:
 - Ser **conexo** , esto es, que dos vértices cualesquiera deben estar
 unidos por al menos un camino.
 
+![alt text](img/img32.gif)
+
 **Imagen 3. 2** : Ejemplo de red semántica representada mediante un árbol.
 
 #### Ventajas y desventajas del uso de redes semánticas
@@ -134,38 +136,12 @@ Una vez se han analizado las características de las redes semánticas y se ha
 aclarado sus formas de representación, pasemos a ver qué ventajas y qué
 inconvenientes conllevan su uso para representar el conocimiento:
 
-
-```
-Ventajas Desventajas
-Permiten la declaración de
-importantes asociaciones, en forma
-explícita.
-```
-```
-Poca flexibilidad.
-```
-```
-Son una forma natural de
-representar el conocimiento.
-```
-```
-Son más lentas en tiempo de
-ejecución que otras técnicas.
-Transmite el conocimiento de una
-manera transparente.
-```
-```
-No son muy adecuadas dada su
-ausencia de cuantificadores
-equivalentes.
-Su representación es intuitiva y
-fácil de entender para el usuario.
-```
-```
-No son inteligentes, por tanto,
-dependen en gran medida de su
-```
-**diseño inicial.**^
+| Ventajas | Desventajas |
+|--------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| Permiten la declaración de importantes asociaciones, en forma explícita. | Poca   flexibilidad. |
+| Son una forma   natural de representar el conocimiento. | Son más lentas   en tiempo de ejecución que otras técnicas. |
+| Transmite el   conocimiento de una manera transparente. | No son muy adecuadas dada su ausencia de cuantificadores   equivalentes. |
+| Su representación es intuitiva y fácil de entender   para el usuario. | No son   inteligentes, por tanto, dependen en gran medida de su diseño inicial. |
 
 ### Reglas de producción
 
@@ -176,44 +152,28 @@ Esta técnica se conoce también como reglas “ **IF-THEN** ”, porque tienen 
 partes principales:
 
 - La parte **SI** (IF) del **antecedente** o la **condición**.
+
 - La parte **ENTONCES,** que se corresponde con la **consecuencia** , la
     **acción** o la **respuesta**.
 
 Ejemplos:
 
 ```
-➢ Si la temperatura corporal es superior o igual a 39ºC, entonces tienes
-fiebre.
+➢ Si la temperatura corporal es superior o igual a 39ºC, entonces tienes fiebre.
+
 ➢ Si un animal come carne entonces es carnívoro.
 ```
 
-```
-1 .- Ejemplo genérico de reglas de producción.
-```
-```
-Ventajas Desventajas
-Se puede implementar usando un
-lenguaje más natural.
-```
-```
-Resulta difícil la manipulación de
-grandes conjuntos de reglas.
-Es modular, puesto que cada regla
-es una porción de conocimiento
-independiente.
-```
-```
-No todos los métodos de resolución
-de problemas humanos se
-representan fácilmente.
-Para modificar el conocimiento,
-solo hay que añadir eliminar reglas.
-```
-```
-Pueden activarse varias reglas a la
-vez, lo que hace necesario una
-estrategia de control.
-```
+![alt text](img/img33.gif)
+
+**Imagen 3. 3** : Ejemplo genérico de reglas de producción.
+
+| Ventajas | Desventajas |
+|-----------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| Se puede implementar   usando un lenguaje más natural. | Resulta difícil la manipulación de grandes   conjuntos de reglas. |
+| Es modular,   puesto que cada regla es una porción de conocimiento independiente. | No todos los   métodos de resolución de problemas humanos se representan fácilmente. |
+| Para modificar el conocimiento, solo hay que añadir   eliminar reglas. | Pueden activarse varias reglas a la vez, lo que hace   necesario una estrategia de control. |
+
 ### Representación de marcos
 
 Los marcos son una forma de representar la información de manera ordenada
@@ -225,20 +185,17 @@ otros marcos.
 Normalmente los marcos suelen ser Clases.
 
 
-**Ejemplo:**
+**Ejemplo:** 
 
-```
-Ventajas Desventajas
-Son fáciles de programar. El mecanismo de inferencia no se procesa fácilmente.
-La representación es fácil de
-entender y visualizar. Tiene un enfoque muy genérico.^
-Se puede incluir datos por defectos
-para cuando la búsqueda tiene
-información omitida.
-```
-```
-2 .- Marco para coches de Alquiler
-```
+![alt text](img/img34.png)
+
+**Imagen 3. 4** : Marco para coches de Alquiler.
+
+| Ventajas | Desventajas |
+|------------------------------------------------------------------------------------------|--------------------------------------------------------|
+| Son fáciles   de programar. | El mecanismo de inferencia no se procesa   fácilmente. |
+| La   representación es fácil de entender y visualizar. | Tiene un   enfoque muy genérico. |
+| Se puede incluir datos por defectos para cuando la   búsqueda tiene información omitida. |  |
 
 ## Profundización sobre la representación lógica
 
@@ -323,8 +280,9 @@ lógica proposicional.
 
 Alfabeto típico para lenguaje de primer orden (Predicados).
 
-Un predicado es una expresión lingüística que se puede conectar con una o
-varias otras expresiones para formar una oración
+![alt text](img/img35.png)
+
+**Imagen 3. 5** : Alfabeto lenguaje 1º orden.
 
 Una constante de individuo es una expresión lingüística que refiere a una
 entidad.
