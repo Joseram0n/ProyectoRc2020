@@ -105,7 +105,7 @@ la red. Dentro de estas asociaciones, encontramos algunas como:
 ES_UN, PARTE_DE, CAUSA_DE, entre otras. También pueden
 representar definiciones y características de nodos.
 
-![alt text](\Parte_Teorica\img31.png?raw=true)
+![alt text](/img/img31.png?raw=true)
 
 **Imagen 3.1** : Ejemplo de red semántica representada mediante un grafo
 
