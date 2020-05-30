@@ -332,3 +332,13 @@ consecuencias de esa teoría se reduzca.
 
 **Lógica intuicionista** : Enfatiza las pruebas, en vez de la verdad, a lo largo de
 las transformaciones de las proposiciones.
+
+
+
+## Bibliografía
+
+- https://www.edureka.co/blog/knowledge-representation-in-ai/
+- https://www.slideshare.net/YasirAhmedKhan/5-knowledgerepresentation-10-sldes
+- https://ccc.inaoep.mx/~esucar/Clases-ia/Laminas2014/logica.pdf
+- https://www.dsi.fceia.unr.edu.ar/downloads/IIA/presentaciones/rc-logica.pdf
+- https://www2.infor.uva.es/~calonso/Ingenieria%20Conocimiento-Grado%20Informatica/ContenidosTeoria/Logica%20y%20representacion%20del%20conocimiento.pdf
