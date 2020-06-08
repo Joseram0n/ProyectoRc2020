@@ -239,19 +239,19 @@ La ficha del jugador es la **O** y la ficha de la máquina es la **X**.
 
 Es un predicado para indicar el hecho de que la posición (numero) L contiene una ficha X.
 
-![alt text](img/img5.png)
+![alt text](img/img5.PNG)
 
 ## o(?L) <!-- omit in toc -->
 
 Es un predicado para indicar el hecho de que la posición (numero) L contiene una ficha O.
 
-![alt text](img/img6.png)
+![alt text](img/img6.PNG)
 
 ## ocupado(?L) <!-- omit in toc -->
 
 Es cierto si L es un numero con una casilla ocupada por X u O.
 
-![alt text](img/img7.png)
+![alt text](img/img7.PNG)
 
 ## trio(+L,+L,+L) <!-- omit in toc -->
 
@@ -272,7 +272,7 @@ Como se puede observar, estás son las diferentes combinaciones de posiciones en
 
 Es cierto si existe un trio (predicado analizado anteriormente) y las tres posiciones contienen la misma ficha.
 
-![alt text](img/img8.png)
+![alt text](img/img8.PNG)
 
 ## lleno <!-- omit in toc -->
 
@@ -286,19 +286,19 @@ lleno :- ocupado(1), ocupado(2), ocupado(3), ocupado(4), ocupado(5), ocupado(6),
 ocupado(8), ocupado(9).
 ```
 
-![alt text](img/img9.png)
+![alt text](img/img9.PNG)
 
 ## empate <!-- omit in toc -->
 
 Es cierto si lleno es verdadero y no se ha hecho tres en raya.
 
-![alt text](img/img10.png)
+![alt text](img/img10.PNG)
 
 ## desventaja(?L) <!-- omit in toc -->
 
 Es cierto si al jugador solo le falta una casilla para lograr hacer tres en raya, en cuyo caso la máquina actúa en consecuencia colocando una ficha en dicha casilla con el objetivo de impedir la victoria del usuario.
 
-![alt text](img/img11.png)
+![alt text](img/img11.PNG)
 
 Como se puede observar, se ha intentado hacer tres en raya con el trio de posiciones 1, 2 y 3, pero una vez hemos colocado la segunda ficha, la máquina nos impide realizar el tres en raya colocando una ficha suya en dicha posición.
 
@@ -306,7 +306,7 @@ Como se puede observar, se ha intentado hacer tres en raya con el trio de posici
 
 Es cierto si la máquina solo necesita una casilla más para lograr realizar tres en raya.
 
-![alt text](img/img12.png)
+![alt text](img/img12.PNG)
 
 En este caso, si no se lo impedimos, intentará colocar una 	de sus fichas en la posición 8, resultando el movimiento en 	una victoria para la máquina.
 
@@ -314,7 +314,7 @@ En este caso, si no se lo impedimos, intentará colocar una 	de sus fichas en la
 
 Es cierto si al jugador aún le faltan dos movimientos para lograr tatetí. El objetivo de este predicado es evitar llegar a una situación de *desventaja*, por lo que la máquina colocaría su ficha en una de las posiciones donde el jugador puede acabar haciendo tres en raya.
 
-![alt text](img/img13.png)
+![alt text](img/img13.PNG)
 
 Como se puede observar, tras colocar el usuario una ficha 	en la posición 1, la máquina coloca una suya en la posición 	9. Estaréis pensando que podía haberla colocado también 	en la posición 3, o en la 7, pero la coloca en la casilla 9 por 	el orden en el que hemos especificado los tríos que hacen 	tres en raya, y el primero que se especifica en el que la 	primera posición es la casilla 1 es el trío (1,5,**9**).
 
@@ -327,7 +327,7 @@ Es cierto si a la máquina aún le faltan dos movimientos para lograr hacer tres
 Es cierto cuando ninguna de las estrategias anteriores es cierta, de manera que devuelve una posición cualquiera según un orden de prioridad preestablecido.
 La primera posición especificada es la central, es decir, la casilla número 5, que como se puede observar es la casilla en la que siempre comienza la máquina si decidimos que ella empiece la partida a través del predicado *start_pc*, el cual se analiza más adelante.
 
-![alt text](img/img14.png)
+![alt text](img/img14.PNG)
 
 ## lugar_elegido (+L) <!-- omit in toc -->
 
@@ -418,7 +418,7 @@ Son ciertos si se ha producido un tres en raya, ya sea por parte de la máquina 
 
 ANTES | DESPUES
 :----:|:----:
-![alt text](img/img4.png "ANTES")|![alt text](img/img2.png "DESPUES")
+![alt text](img/img4.PNG "ANTES")|![alt text](img/img2.png "DESPUES")
 
 
 
