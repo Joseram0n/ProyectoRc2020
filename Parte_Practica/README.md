@@ -1,25 +1,34 @@
-# INFORME PRÁCTICO
+# Acertijo de Einstein y Tres en Raya <!-- omit in toc -->
 
-## REPRESENTACIÓN DEL CONOCIMIENTO
+[🏫 Universidad de Huelva (UHU)](http://www.uhu.es/index.php)  
+📅 Curso 2019-2020  
+📚 [Representación del Conocimiento](http://www.uhu.es/etsi/informacion-academica/informacion-comun-todos-los-titulos/guias-docentes/guias-docentes-2019-2020/listado-guias/guia_1920/?codigo=606010236) 
+
+Equipo:
+- 👨‍🎓 [Alejandro Bueno Mañas](https://github.com/alexbm98)
+- 👨‍🎓 [José Rramón López Garrido](https://github.com/Joseram0n)
+
+___
+
+## Índice <!-- omit in toc -->
+
+- [1. INTRODUCCIÓN](#1-introducción)
+- [2. EINSTEIN’S RIDDLE](#2-einsteins-riddle)
+  - [2.1. BREVE DESCRIPCIÓN DEL PROBLEMA](#21-breve-descripción-del-problema)
+  - [2.2. CÓDIGO PROPUESTO QUE RESUELVE EL PROBLEMA](#22-código-propuesto-que-resuelve-el-problema)
+  - [2.3. EJEMPLO DE FUNCIONAMIENTO](#23-ejemplo-de-funcionamiento)
+- [3. TRES EN RAYA](#3-tres-en-raya)
+  - [3.1. INTRODUCCIÓN AL JUEGO](#31-introducción-al-juego)
+  - [3.2. OBJETIVO](#32-objetivo)
+  - [3.3. ANÁLISIS DEL CÓDIGO](#33-análisis-del-código)
+    - [3.4.1. DEFINICIÓN DE PREDICADOS](#341-definición-de-predicados)
+    - [3.4.2. MEJORAS IMPLEMENTADAS](#342-mejoras-implementadas)
+      - [3.4.3.1. Mejora Visualización](#3431-mejora-visualización)
+      - [3.4.3.2. Mejora tratamiento de errores](#3432-mejora-tratamiento-de-errores)
+- [4. REFERENCIAS](#4-referencias)
 
 
-## Índice
-
-- INTRODUCCIÓN
-- EINSTEIN’S RIDDLE
-   - BREVE DESCRIPCIÓN DEL PROBLEMA
-   - CÓDIGO PROPUESTO QUE RESUELVE EL PROBLEMA
-   - EJEMPLO DE FUNCIONAMIENTO
-- TRES EN RAYA
-   - INTRODUCCIÓN AL JUEGO
-   - OBJETIVO
-   - ANÁLISIS DEL CÓDIGO
-      - DEFINICIÓN DE PREDICADOS:
-      - MEJORAS IMPLEMENTADAS
-- BIBLIOGRAFÍA
-
-
-## INTRODUCCIÓN
+## 1. INTRODUCCIÓN
 
 En este documento se analizarán los dos problemas que hemos escogido, el problema
 “Einstein’s Riddle” (el acertijo de Einstein, también conocido como el acertijo de la cebra) y
@@ -29,9 +38,9 @@ Uruguay).
 Trataremos de explicar lo más claramente posible el código propuesto para cada problema,
 de tal manera que sea entendible para la gran mayoría de usuarios.
 
-## EINSTEIN’S RIDDLE
+## 2. EINSTEIN’S RIDDLE
 
-### BREVE DESCRIPCIÓN DEL PROBLEMA
+### 2.1. BREVE DESCRIPCIÓN DEL PROBLEMA
 
 El planteamiento es relativamente sencillo: en una calle hay cinco casas de colores distintos,
 y en cada casa vive una persona de distinta nacionalidad. Los cinco dueños no tienen
@@ -64,7 +73,7 @@ Con estas pistas, se plantean las siguientes preguntas:
 Las respuestas a estas dos preguntas son: Noruego y Japonés. Se pueden averiguar a través
 del código que proponemos a continuación.
 
-### CÓDIGO PROPUESTO QUE RESUELVE EL PROBLEMA
+### 2.2. CÓDIGO PROPUESTO QUE RESUELVE EL PROBLEMA
 
 El código que se ha propuesto para resolver esas dos cuestiones se encuentra en el
 siguiente enlace:
@@ -73,19 +82,25 @@ siguiente enlace:
 
 Una vez observado el código, pasemos a analizar los predicados más relevantes:
 
-**_nextto (?A, ?B, ?List)_**
+
+> ## nextto (?A, ?B, ?List)
+
 
 Es verdadero cuando los elementos “A” y “B” son consecutivos, en ese orden, en la lista
 “List”.
 
 En nuestro código lo empleamos para especificar la regla 6 , de la siguiente forma:
 
-**_nextto_(house(ivory, _, _, _, _), house(green, _, _, _, _), Houses)_**  
+```prolog
+nextto(house(ivory, _, _, _, _), house(green, _, _, _, _),Houses)
+``` 
 
 Con esto, estaríamos especificando que la casa verde está justo a continuación de la casa de
 marfil, en la lista especificada (más adelante veremos para qué utilizaremos esta lista).
 
-**_adjacent (?A, ?B, ?List) :- nextto (A, B, List); nextto (B, A, List)_**  
+```prolog
+adjacent (?A, ?B, ?List) :- nextto (A, B, List); nextto (B, A, List)
+```
 
 Se ha creado para que el predicado sea verdadero si los elementos “ **A** ” y “ **B** ” son
 consecutivos en la lista “ **List** ”, sin importar el orden en el que estén.
@@ -93,15 +108,16 @@ consecutivos en la lista “ **List** ”, sin importar el orden en el que esté
 Más concretamente, se ha utilizado para especificar las reglas 11, 12 y 15, de la siguiente
 manera:
 
-**_adjacent_(house(_, _, _, _, chesterfields), house(_, _, fox, _, _), Houses)_** -> **Regla 11**
+```prolog
+adjacent(house(_, _, _, _, chesterfields), house(_, _, fox, _, _), Houses)
 
-**_adjacent _(house(_, _, _, _, kools), house(_, _, horse, _, _), Houses)_** -> **Regla 12**
+adjacent(house(_, _, _, _, kools), house(_, _, horse, _, _), Houses)
 
-**_adjacent_(house(_, norwegian, _, _, _), house(blue, _, _, _, _), Houses)_** -> **Regla 15**
-
-
-**_solve (-WaterDrinker, - ZebraOwner)_**
-
+adjacent(house(_, norwegian, _, _, _), house(blue, _, _, _, _), Houses)
+```
+```prolog
+solve (-WaterDrinker, - ZebraOwner)
+```
 Este será el predicado que nos resolverá las dos cuestiones planteadas.
 
 **WaterDrinker** nos indicará la nacionalidad de la persona que bebe agua, por otra parte
@@ -172,7 +188,7 @@ En el contexto de nuestro problema, lo utilizamos para especificar las reglas 9 
 Es decir, en la casa del centro se bebe leche (Regla 9) y en la primera casa vive el noruego
 (Regla 10).
 
-### EJEMPLO DE FUNCIONAMIENTO
+### 2.3. EJEMPLO DE FUNCIONAMIENTO
 
 A continuación, una muestra del funcionamiento del código:
 
@@ -183,9 +199,9 @@ nacionalidad noruega y la persona que tiene como mascota una cebra es de naciona
 japonesa.
 
 
-## TRES EN RAYA
+## 3. TRES EN RAYA
 
-### INTRODUCCIÓN AL JUEGO
+### 3.1. INTRODUCCIÓN AL JUEGO
 
 El juego de tres en raya es para 2 jugadores, consiste en intentar formar una línea usando
 fichas (X u O) en 3 casillas adjuntas (las diagonales cuentan) en un tablero de 3x3.
@@ -194,12 +210,12 @@ Es un juego que debido a su simplicidad se suele usar como herramienta pedagógi
 enseñar los conceptos de teoría de juegos y la rama de inteligencia artificial que se encarga
 de la búsqueda de árboles de juego.
 
-### OBJETIVO
+### 3.2. OBJETIVO
 
 Se intenta crear un agente reactivo que sea capaz de reaccionar a los cambios en el sistema y jugar
 siguiendo una estrategia predefinida.
 
-### ANÁLISIS DEL CÓDIGO
+### 3.3. ANÁLISIS DEL CÓDIGO
 
 El código se puede encontrar el siguiente archivo del repositorio:
 
@@ -208,7 +224,7 @@ El código se puede encontrar el siguiente archivo del repositorio:
 Primero se le indica a prolog con la directiva dynamic que la definición de un predicado
 puede cambiar durante el proceso de ejecución.
 
-#### DEFINICIÓN DE PREDICADOS:
+#### 3.4.1. DEFINICIÓN DE PREDICADOS
 
 **_x(?L)_**
 
@@ -340,18 +356,22 @@ Predicado para jugar la partida con el siguiente orden: humano -> maquina.
 Predicado para jugar la partida con el siguiente orden: maquina -> humano.
 
 
-#### MEJORAS IMPLEMENTADAS
+#### 3.4.2. MEJORAS IMPLEMENTADAS
 
 Hemos decidido hacerle una pequeña mejora al código para mejorar la visualización de la partida por
 pantalla y tratar los errores de input del usuario, modificando el predicado **imp_tablero** y
 **lugar_valido**.
 
-### Mejora Visualización :
+##### 3.4.3.1. Mejora Visualización
 ![alt text](img/img2.png)
 ___
-### Mejora tratamiento de errores:
+##### 3.4.3.2. Mejora tratamiento de errores
 ![alt text](img/img3.png)
 
-## BIBLIOGRAFÍA
+## 4. REFERENCIAS
 
-Manual de Prolog: https://www.swi-prolog.org/pldoc/doc_for?object=manual
+[📖 Manual de Prolog](https://www.swi-prolog.org/pldoc/doc_for?object=manual)
+
+[🧾 Proyecto Representación del Conocimiento jcarpio](https://github.com/jcarpio/rc1920/blob/master/proyecto-rc.md)
+
+[👨‍🏫 Pagina UHU Profesor](http://www.uhu.es/jose.carpio/)
