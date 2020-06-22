@@ -2,7 +2,9 @@
 
 [🏫 Universidad de Huelva (UHU)](http://www.uhu.es/index.php)  
 📅 Curso 2019-2020  
-📚 [Representación del Conocimiento](http://www.uhu.es/etsi/informacion-academica/informacion-comun-todos-los-titulos/guias-docentes/guias-docentes-2019-2020/listado-guias/guia_1920/?codigo=606010236) 
+[📚 Representación del Conocimiento](http://www.uhu.es/etsi/informacion-academica/informacion-comun-todos-los-titulos/guias-docentes/guias-docentes-2019-2020/listado-guias/guia_1920/?codigo=606010236)   
+[📕 Documento Programación Decalrativa](http://www.uhu.es/jose.carpio/N_95.pdf)  
+[🎞️ Video Introducción a la Inducción](https://www.youtube.com/watch?v=31ypX6BVq2E) 
 
 Equipo:
 - 👨‍🎓 [Alejandro Bueno Mañas](https://github.com/alexbm98)
